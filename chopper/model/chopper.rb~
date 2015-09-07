@@ -1,0 +1,7 @@
+class Chopper
+  def chop(num, list)
+    res = list.length - 1
+    res 
+  end
+
+end
