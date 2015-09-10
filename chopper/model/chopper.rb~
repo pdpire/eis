@@ -1,7 +1,24 @@
 class Chopper
   def chop(num, list)
-    res = list.length - 1
-    res 
+=begin
+    if num == 3 && list == []
+      -1
+    end
+
+    @ret = 0
+    list.each do |number|
+      if number == num
+        return ret
+      end
+        ret = ret + 1
+    end
+=end
+    for i in list
+      if(list[i] == num)
+        return i
+      end
+    end
+
   end
 
 end
