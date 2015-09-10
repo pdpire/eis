@@ -1,9 +1,12 @@
 class Chopper
   def chop(num, list)
-    if num == 3 && list == []
-      -1
-    elsif num == 3 && list == [3]
-      0
-    end 
+    @ret = 0
+    list.each do |number|
+      if number == num
+        return @ret
+      end
+      @ret = @ret + 1
+    end
+    -1
   end
 end
