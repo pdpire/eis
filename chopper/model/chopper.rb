@@ -9,4 +9,13 @@ class Chopper
     end
     -1
   end
+
+  def sum(list)
+    if list[0] == nil
+      "vacio"
+    end
+  end
+
 end
+
+  
