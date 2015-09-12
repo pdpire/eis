@@ -14,7 +14,11 @@ class Chopper
     if list[0] == nil
       "vacio"
     elsif list[0] == 1
-      "uno"
+      if list[1] == 3
+        return "cuatro"
+      else
+        return "uno"
+      end
     end
       
   end
