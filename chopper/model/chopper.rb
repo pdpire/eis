@@ -13,7 +13,10 @@ class Chopper
   def sum(list)
     if list[0] == nil
       "vacio"
+    elsif list[0] == 1
+      "uno"
     end
+      
   end
 
 end
