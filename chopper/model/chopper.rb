@@ -29,6 +29,8 @@ class Chopper
         return "cuatro"
       when 18
         return "uno,ocho"
+      when 99
+        return "nueve,nueve"
       end
     else
       return "demasiado grande"
