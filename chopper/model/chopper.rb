@@ -20,14 +20,18 @@ class Chopper
     list.each do |number|
       @total = @total + number
     end
-
-    case @total
-    when 1
-      return "uno"
-    when 4
-      return "cuatro"
-    when 18
-      return "uno,ocho"
+    
+    if @total < 100
+      case @total
+      when 1
+        return "uno"
+      when 4
+        return "cuatro"
+      when 18
+        return "uno,ocho"
+      end
+    else
+      return "demasiado grande"
     end
 
   end
