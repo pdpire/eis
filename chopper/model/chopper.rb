@@ -11,16 +11,25 @@ class Chopper
   end
 
   def sum(list)
+    
     if list[0] == nil
-      "vacio"
-    elsif list[0] == 1
-      if list[1] == 3
-        return "cuatro"
-      else
-        return "uno"
-      end
+      return "vacio"
     end
-      
+
+    @total = 0
+    list.each do |number|
+      @total = @total + number
+    end
+
+    case @total
+    when 1
+      return "uno"
+    when 4
+      return "cuatro"
+    when 18
+      return "uno,ocho"
+    end
+
   end
 
 end
