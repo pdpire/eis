@@ -12,7 +12,7 @@ class Chopper
 
   def sum(list)
     
-    if list[0] == nil
+    if list == []
       return "vacio"
     end
 
@@ -20,22 +20,43 @@ class Chopper
     list.each do |number|
       @total = @total + number
     end
-    
-    if @total < 100
-      case @total
-      when 1
-        return "uno"
-      when 4
-        return "cuatro"
-      when 18
-        return "uno,ocho"
-      when 99
-        return "nueve,nueve"
-      end
-    else
-      return "demasiado grande"
-    end
 
+    @stNum = @total.to_s
+
+    if @total > 99
+      return "demasiado grande"
+    elsif @total < 10
+      printNumber(@stNum)
+    else
+      printNumber(@stNum[0])<<","<<printNumber(@stNum[1])
+    end
+    
+
+  end
+
+  def printNumber(stNum)
+    case stNum
+    when "0"
+      return "cero"
+    when "1"
+      return "uno"
+    when "2"
+      return "dos"
+    when "3"
+      return "tres"
+    when "4"
+      return "cuatro"
+    when "5"
+      return "cinco"
+    when "6"
+      return "seis"
+    when "7"
+      return "siete"
+    when "8"
+      return "ocho"
+    when "9"
+      return "nueve"
+    end
   end
 
 end
