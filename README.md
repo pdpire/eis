@@ -1,7 +1,5 @@
 # Instrucciones
 
-#[![Build Status](https://travis-ci.org/pdpire/eis.svg)](https://travis-ci.org/pdpire/eis-unq)
-
 [![Build Status](https://travis-ci.org/pdpire/eis.svg?branch=master)](https://travis-ci.org/pdpire/eis)
 
 2. Unicar cada kata en su propia carpeta
