@@ -10,4 +10,22 @@ describe 'Papel' do
 		expect(papel.versus("tijera")).to eq "pierde"
     end
 
+    it 'deberia ganarle a piedra' do
+		papel = Papel.new
+		expect(papel.versus("piedra")).to eq "gana"
+    end
+
+
+    it 'deberia perder con mono' do
+		papel = Papel.new
+		expect(papel.versus("mono")).to eq "pierde"
+    end
+
+
+    it 'deberia empatar con papel' do
+		papel = Papel.new
+		expect(papel.versus("papel")).to eq "empate"
+    end
+
+
 end
