@@ -1,8 +1,15 @@
 class Piedra
 
   def versus(rival)
-  	if rival == "tijera"
-  		return "gana"
+  	case rival
+  	  when "tijera"
+  	  	"gana"
+  	  when "papel"
+  	    "pierde"
+  	  when "mono"
+  	    "empate"
+  	  when "piedra"
+  	  	"empate"
   	end
   end
 end
