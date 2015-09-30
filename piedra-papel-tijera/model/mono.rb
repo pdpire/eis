@@ -1,14 +1,18 @@
 class Mono
 
+  def id
+    0	
+  end
+
   def versus(rival)
-    case rival
-  	  when "tijera"
+    case rival.id
+  	  when 3
   	  	"pierde"
-  	  when "piedra"
+  	  when 1
   	  	"empate"
-  	  when "papel"
+  	  when 2
   	  	"gana"
-  	  when "mono"
+  	  when 0
   	  	"empate"
   	end
   end

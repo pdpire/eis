@@ -1,14 +1,18 @@
 class Papel
 
+  def id
+    2	
+  end	
+
   def versus(rival)
-    case rival
-  	  when "tijera"
+    case rival.id
+  	  when 3
   	  	"pierde"
-  	  when "piedra"
+  	  when 1
   	  	"gana"
-  	  when "mono"
+  	  when 0
   	  	"pierde"
-  	  when "papel"
+  	  when 2
   	  	"empate"
   	end
   end
