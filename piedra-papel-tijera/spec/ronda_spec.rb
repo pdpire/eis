@@ -22,11 +22,8 @@ describe 'Ronda' do
 		jug1.elegir(tijera)
 		jug2.elegir(piedra)
 
-		ronda.setearJugadores(jug1, jug2)
 
-		ronda.jugarRonda
-
-		expect(ronda.verGanador).to eq "jugador2"
+		expect(ronda.jugarRonda(jug1, jug2)).to eq "jugador2"
     end
 
     it 'deberia ganarla jugador1' do
@@ -41,11 +38,7 @@ describe 'Ronda' do
 		jug1.elegir(papel)
 		jug2.elegir(piedra)
 
-		ronda.setearJugadores(jug1, jug2)
-
-		ronda.jugarRonda
-
-		expect(ronda.verGanador).to eq "jugador1"
+		expect(ronda.jugarRonda(jug1, jug2)).to eq "jugador1"
     end
 
     it 'deberian empatarla' do
@@ -60,11 +53,7 @@ describe 'Ronda' do
 		jug1.elegir(mono)
 		jug2.elegir(piedra)
 
-		ronda.setearJugadores(jug1, jug2)
-
-		ronda.jugarRonda
-
-		expect(ronda.verGanador).to eq "empate"
+		expect(ronda.jugarRonda(jug1, jug2)).to eq "empate"
     end
 
 
