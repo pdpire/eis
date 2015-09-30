@@ -12,9 +12,15 @@ class Ronda
   def jugarRonda
   	if @jugador1.verJugada.versus(@jugador2.verJugada) == "gana"
   		@ganador = "jugador1"
-  	else
+  	elsif @jugador1.verJugada.versus(@jugador2.verJugada) == "pierde"
   		@ganador = "jugador2"
+  	else
+  		@ganador = "empate"
   	end
+  end
+
+  def verGanador
   	return @ganador
   end
+
 end

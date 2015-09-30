@@ -3,6 +3,8 @@ require_relative '../model/ronda'
 require_relative '../model/jugador'
 require_relative '../model/piedra'
 require_relative '../model/tijera'
+require_relative '../model/papel'
+require_relative '../model/mono'
 
 describe 'Ronda' do
 
@@ -22,7 +24,47 @@ describe 'Ronda' do
 
 		ronda.setearJugadores(jug1, jug2)
 
-		expect(ronda.jugarRonda).to eq "jugador2"
+		ronda.jugarRonda
+
+		expect(ronda.verGanador).to eq "jugador2"
+    end
+
+    it 'deberia ganarla jugador1' do
+		ronda = Ronda.new
+
+		jug1 = Jugador.new
+		jug2 = Jugador.new
+
+		papel = Papel.new
+		piedra = Piedra.new
+
+		jug1.elegir(papel)
+		jug2.elegir(piedra)
+
+		ronda.setearJugadores(jug1, jug2)
+
+		ronda.jugarRonda
+
+		expect(ronda.verGanador).to eq "jugador1"
+    end
+
+    it 'deberian empatarla' do
+		ronda = Ronda.new
+
+		jug1 = Jugador.new
+		jug2 = Jugador.new
+
+		mono = Mono.new
+		piedra = Piedra.new
+
+		jug1.elegir(mono)
+		jug2.elegir(piedra)
+
+		ronda.setearJugadores(jug1, jug2)
+
+		ronda.jugarRonda
+
+		expect(ronda.verGanador).to eq "empate"
     end
 
 
