@@ -11,7 +11,7 @@ describe 'Partida' do
 
     let(:partida) { Partida.new }	
 
-	it 'deberia ganarla jugador2' do
+	it 'deberia ganarla jugador2 en 2 rondas' do
 		partida = Partida.new
 		jug1 = Jugador.new
 		jug2 = Jugador.new
@@ -34,6 +34,67 @@ describe 'Partida' do
 		partida.jugar(ronda)
 
 		expect(partida.resultado).to eq "gano jugador2"
+    end
+
+    it 'deberia ganarla jugador1 en 3 rondas' do
+		partida = Partida.new
+		jug1 = Jugador.new
+		jug2 = Jugador.new
+		tijera = Tijera.new
+		piedra = Piedra.new
+		papel = Papel.new
+		mono = Mono.new
+		ronda = Ronda.new
+		
+		partida.setearJugadores(jug1, jug2)
+
+		jug1.elegir(tijera)
+		jug2.elegir(papel)
+
+		partida.jugar(ronda)
+
+		jug1.elegir(piedra)
+		jug2.elegir(papel)
+
+		partida.jugar(ronda)
+
+		jug1.elegir(mono)
+		jug2.elegir(papel)
+
+		partida.jugar(ronda)
+
+
+		expect(partida.resultado).to eq "gano jugador1"
+    end
+
+     it 'deberia ser empate en 3 rondas' do
+		partida = Partida.new
+		jug1 = Jugador.new
+		jug2 = Jugador.new
+		tijera = Tijera.new
+		piedra = Piedra.new
+		papel = Papel.new
+		mono = Mono.new
+		ronda = Ronda.new
+		
+		partida.setearJugadores(jug1, jug2)
+
+		jug1.elegir(tijera)
+		jug2.elegir(papel)
+
+		partida.jugar(ronda)
+
+		jug1.elegir(piedra)
+		jug2.elegir(papel)
+
+		partida.jugar(ronda)
+
+		jug1.elegir(mono)
+		jug2.elegir(piedra)
+
+		partida.jugar(ronda)
+
+		expect(partida.resultado).to eq "empate"
     end
 
 end
