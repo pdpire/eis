@@ -57,4 +57,22 @@ describe 'Batalla_naval' do
 
 	  expect(@excepcion.message).to eq 'fuera de rango'
     end
+
+
+    it 'no deberia poner por pos ocupada' do
+	  @batalla = Batalla_naval.new
+	  @batalla.crear_tablero(8,8)
+	  @sub = Submarino.new
+	  @sub.set_id(15)
+	  @des = Destructor.new
+	  @sub.set_id(20)
+	  @batalla.poner_barco(2, 5, @sub, "vertical")
+	  begin
+	    @batalla.poner_barco(1, 5, @des, "horizontal")
+	  rescue Exception => e
+        @excepcion = e
+      end
+
+	  expect(@excepcion.message).to eq 'fuera de rango'
+    end
 end

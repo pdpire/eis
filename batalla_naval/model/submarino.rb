@@ -23,7 +23,7 @@ class Submarino
   	tablero.poner_en_celda(x,y, get_id)
   end
 
-  def poner_vertical(posX, posY, tablero)
+  def poner_vertical(x, y, tablero)
   	tablero.poner_en_celda(x,y, get_id)
   end
 end
