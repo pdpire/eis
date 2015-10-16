@@ -15,7 +15,7 @@ class Crucero
   	tablero.poner_en_celda(x+1,y, get_id)
   end
 
-  def poner_vertical(posX, posY, tablero)
+  def poner_vertical(x, y, tablero)
   	tablero.poner_en_celda(x,y, get_id)
   	tablero.poner_en_celda(x,y+1, get_id)
   end
