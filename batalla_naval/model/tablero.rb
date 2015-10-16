@@ -2,18 +2,29 @@ require_relative '../model/tablero'
 
 class Tablero
    
-   def initialize()
+   def initialize(x,y)
     @tablero = Hash.new
-    @n = 0
-    for x in 0..4
-      for y in 0..4
-        @tablero[[x,y]] = "libre"
+    @ancho = x
+    @alto = y
+    for a in 0..x
+      for b in 0..y
+        @tablero[[a,b]] = "vacio"
       end
     end
   end
 
   def completo
   	return @tablero
+  end
+
+
+  def alto
+  	return @alto
+  end
+
+
+  def ancho
+  	return @ancho
   end
 
   def posicion(x, y)

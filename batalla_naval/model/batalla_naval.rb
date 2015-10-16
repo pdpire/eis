@@ -2,8 +2,8 @@ require_relative '../model/tablero'
 
 class Batalla_naval
 
-  def crear_tablero
-    @tablero = Tablero.new
+  def crear_tablero(x,y)
+    @tablero = Tablero.new(x,y)
   end
 
   def get_tablero

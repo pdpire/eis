@@ -7,10 +7,11 @@ describe 'Submarino' do
   let(:submarino) { Submarino.new }	
     
     it 'deberia poner submarino en pos 4,3' do
-	  @tablero = Tablero.new
+	  @tablero = Tablero.new(5,5)
 	  @sub = Submarino.new
-	  @sub.poner_horizontal(2, 1, @tablero)
+	  @sub.set_id(10)
+	  @sub.poner_horizontal(4, 3, @tablero)
 
-	  expect(@tablero.posicion(2,1)).to eq "submarinoPos1"
+	  expect(@tablero.posicion(4,3)).to eq 10
     end
 end

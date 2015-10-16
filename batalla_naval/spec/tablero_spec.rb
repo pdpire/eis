@@ -6,7 +6,7 @@ describe 'Tablero' do
   let(:tablero) { Tablero.new }	
     
     it 'deberia poner ocupado es pos 2,1' do
-	  @tablero = Tablero.new
+	  @tablero = Tablero.new(2,2)
 	  @tablero.poner_en_celda(2,1,"ocupado")
 	  expect(@tablero.posicion(2,1)).to eq "ocupado"
     end

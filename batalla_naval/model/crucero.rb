@@ -1,6 +1,5 @@
-
-class Submarino
-
+class Crucero
+  
   @id
 
   def set_id(n)
@@ -13,9 +12,11 @@ class Submarino
 
   def poner_horizontal(x, y, tablero)
   	tablero.poner_en_celda(x,y, get_id)
+  	tablero.poner_en_celda(x+1,y, get_id)
   end
 
   def poner_vertical(posX, posY, tablero)
   	tablero.poner_en_celda(x,y, get_id)
+  	tablero.poner_en_celda(x,y+1, get_id)
   end
 end
