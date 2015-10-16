@@ -1,17 +1,16 @@
 require 'rspec'
 require_relative '../model/submarino'
-require_relative '../model/batalla_naval'
+require_relative '../model/tablero'
 
 describe 'Submarino' do
 
   let(:submarino) { Submarino.new }	
     
-    it 'deberia poner submarino en pos 1,1' do
-	  @batalla = Batalla_naval.new
-	  @batalla.crear_tablero(2,2)
+    it 'deberia poner submarino en pos 4,3' do
+	  @tablero = Tablero.new
 	  @sub = Submarino.new
-	  @sub.poner_horizontal(1, 1, @batalla.get_tablero)
+	  @sub.poner_horizontal(2, 1, @tablero)
 
-	  expect(@batalla.get_tablero[1][1]).to eq "submarinoPos1"
+	  expect(@tablero.posicion(2,1)).to eq "submarinoPos1"
     end
 end

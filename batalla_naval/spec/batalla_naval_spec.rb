@@ -6,12 +6,12 @@ describe 'Batalla_naval' do
 
   let(:batalla_naval) { Batalla_naval.new }	
     
-    it 'deberia poner submarino en pos 0,0' do
+    it 'deberia poner submarino en pos 2,1' do
 	  @batalla = Batalla_naval.new
-	  @batalla.crear_tablero(2,1)
+	  @batalla.crear_tablero
 	  @sub = Submarino.new
-	  @batalla.poner_barco(0, 0, @sub, "horizontal")
+	  @batalla.poner_barco(2, 1, @sub, "horizontal")
 
-	  expect(@batalla.get_tablero[0][0]).to eq "submarinoPos1"
+	  expect(@batalla.get_tablero.posicion(2,1)).to eq "submarinoPos1"
     end
 end
