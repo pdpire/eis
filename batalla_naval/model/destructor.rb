@@ -1,6 +1,9 @@
 class Destructor
   
-  @id
+  def initialize
+    @id
+    @tamanio = 3
+  end
 
   def set_id(n)
   	@id = n
@@ -9,6 +12,12 @@ class Destructor
   def get_id
   	return @id
   end
+
+  
+  def get_tamanio
+    return @tamanio
+  end
+
 
   def poner_horizontal(x, y, tablero)
   	tablero.poner_en_celda(x,y, get_id)

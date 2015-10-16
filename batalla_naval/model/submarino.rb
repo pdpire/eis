@@ -1,7 +1,10 @@
 
 class Submarino
 
-  @id
+  def initialize
+    @id
+    @tamanio = 1
+  end
 
   def set_id(n)
   	@id = n
@@ -9,6 +12,11 @@ class Submarino
 
   def get_id
   	return @id
+  end
+
+
+  def get_tamanio
+  	return @tamanio
   end
 
   def poner_horizontal(x, y, tablero)

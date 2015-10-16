@@ -17,13 +17,11 @@ class Tablero
   	return @tablero
   end
 
-
-  def alto
+  def get_alto
   	return @alto
   end
 
-
-  def ancho
+  def get_ancho
   	return @ancho
   end
 
