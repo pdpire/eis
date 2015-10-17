@@ -81,4 +81,14 @@ describe 'Batalla_naval' do
 	  expect(@batalla.disparar_a_celda(4,4)).to eq "agua"
 
     end
+
+    it 'dispara y golpea' do
+	  @batalla = Batalla_naval.new
+	  @batalla.crear_tablero(5,5)
+	  @des = Destructor.new(20)
+	  @batalla.poner_barco(2, 2, @des, "horizontal")
+
+	  expect(@batalla.disparar_a_celda(2,2)).to eq "golpea"
+
+    end
 end

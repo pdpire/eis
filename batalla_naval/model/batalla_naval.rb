@@ -93,12 +93,12 @@ class Batalla_naval
   end
 
    def disparar_a_celda(x, y)
-    if @tablero.posicion(x,y) == "vacio"
+    if get_tablero.posicion(x,y) == "vacio"
       return "agua"
     else
       @barco_id = get_tablero.posicion(x,y)
-      get_tablero[[x,y]] = "vacio"
-      return @tablero.golpea_o_hunde(@barco_id)
+      get_tablero.poner_en_celda(x,y,"vacio")
+      return get_tablero.golpea_o_hunde(@barco_id)
     end
   end 
 
