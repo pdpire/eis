@@ -1,8 +1,8 @@
 
 class Submarino
 
-  def initialize
-    @id
+  def initialize(n)
+    @id = n
     @tamanio = 1
   end
 

@@ -8,8 +8,7 @@ describe 'Crucero' do
     
     it 'deberia poner crucero desde pos 3,2 en horizontal' do
 	  @tablero = Tablero.new(5,5)
-	  @sub = Crucero.new
-	  @sub.set_id(20)
+	  @sub = Crucero.new(20)
 	  @sub.poner_horizontal(3, 2, @tablero)
 
 	  expect(@tablero.posicion(3,2)).to eq 20
@@ -19,8 +18,7 @@ describe 'Crucero' do
 
     it 'deberia poner crucero desde pos 3,2 en vertical' do
 	  @tablero = Tablero.new(5,5)
-	  @sub = Crucero.new
-	  @sub.set_id(20)
+	  @sub = Crucero.new(20)
 	  @sub.poner_vertical(3, 2, @tablero)
 
 	  expect(@tablero.posicion(3,2)).to eq 20

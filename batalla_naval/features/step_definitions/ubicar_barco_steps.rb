@@ -1,27 +1,23 @@
+require_relative '../../model/batalla_naval'
+
 Given(/^la posicion (\d+),(\d+) que esta vacia$/) do |arg1, arg2|
-=begin
-  batalla = Batalla_naval.new
-=end
+  @batalla = Batalla_naval.new
+  @batalla.crear_tablero(6,6)
 end
 
 When(/^ubico mi barco submarino$/) do
-=begin
-  batalla.ubicar_barco(1, 1, "submarino", "horizontal")
-=end
+  @sub = @batalla.get_submarino
+  @batalla.poner_barco(4, 3, @sub, "horizontal")
 end
 
 Then(/^se ubica exitosamente$/) do
-=begin
-  @estado_11 = batalla.consultar_estado_en(1,1)
-  @estado_12 = batalla.consultar_estado_en(1,2)
+  @estado_43 = @batalla.consultar_estado_en(4,3)
 
-  expect(@estado_11).to eq "ocupado"
-  expect(@estado_12).to eq "ocupado"
-=end
+  expect(@estado_43).to eq @sub.get_id
 end
 
 Given(/^la posicion (\d+),(\d+) esta ocupada$/) do |arg1, arg2|
-
+  pending # Write code here that turns the phrase above into concrete actions
 end
 
 When(/^ubico mi barco destructor$/) do

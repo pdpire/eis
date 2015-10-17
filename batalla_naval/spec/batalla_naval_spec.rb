@@ -10,8 +10,7 @@ describe 'Batalla_naval' do
     it 'deberia poner submarino en pos 2,1' do
 	  @batalla = Batalla_naval.new
 	  @batalla.crear_tablero(3,3)
-	  @sub = Submarino.new
-	  @sub.set_id(15)
+	  @sub = Submarino.new(15)
 	  @batalla.poner_barco(2, 1, @sub, "horizontal")
 
 	  expect(@batalla.get_tablero.posicion(2,1)).to eq 15
@@ -20,8 +19,7 @@ describe 'Batalla_naval' do
     it 'deberia poner destructor en pos 2,1 en horizontal' do
 	  @batalla = Batalla_naval.new
 	  @batalla.crear_tablero(5,5)
-	  @sub = Destructor.new
-	  @sub.set_id(15)
+	  @sub = Destructor.new(15)
 	  @batalla.poner_barco(2, 1, @sub, "horizontal")
 
 	  expect(@batalla.get_tablero.posicion(2,1)).to eq 15
@@ -32,8 +30,7 @@ describe 'Batalla_naval' do
     it 'no deberia poner por tablero chico en horizontal' do
 	  @batalla = Batalla_naval.new
 	  @batalla.crear_tablero(3,3)
-	  @sub = Submarino.new
-	  @sub.set_id(15)
+	  @sub = Submarino.new(15)
 	  begin
 	    @batalla.poner_barco(4, 2, @sub, "horizontal")
 	  rescue Exception => e
@@ -47,8 +44,7 @@ describe 'Batalla_naval' do
     it 'no deberia poner por tablero chico en vertical' do
 	  @batalla = Batalla_naval.new
 	  @batalla.crear_tablero(3,3)
-	  @sub = Submarino.new
-	  @sub.set_id(15)
+	  @sub = Submarino.new(15)
 	  begin
 	    @batalla.poner_barco(2, 5, @sub, "vertical")
 	  rescue Exception => e
@@ -62,10 +58,8 @@ describe 'Batalla_naval' do
     it 'no deberia poner por pos ocupada' do
 	  @batalla = Batalla_naval.new
 	  @batalla.crear_tablero(8,8)
-	  @sub = Submarino.new
-	  @sub.set_id(15)
-	  @des = Destructor.new
-	  @sub.set_id(20)
+	  @sub = Submarino.new(15)
+	  @des = Destructor.new(20)
 	  @batalla.poner_barco(2, 5, @sub, "vertical")
 	  begin
 	    @batalla.poner_barco(1, 5, @des, "horizontal")

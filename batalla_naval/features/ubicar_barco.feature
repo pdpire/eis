@@ -1,9 +1,9 @@
 Feature: como usuario quiero ubicar mis barcos
 
-  @wip
+  
   Scenario: ubico mi barco exitosamente
-    Given la posicion 1,1 que esta vacia
-    When ubico mi barco crucero en horizontal
+    Given la posicion 4,3 que esta vacia
+    When ubico mi barco submarino
     Then se ubica exitosamente
   
   @wip

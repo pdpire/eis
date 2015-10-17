@@ -8,8 +8,7 @@ describe 'Destructor' do
     
     it 'deberia poner destructor desde pos 2,3 en horizontal' do
 	  @tablero = Tablero.new(6,6)
-	  @sub = Destructor.new
-	  @sub.set_id(30)
+	  @sub = Destructor.new(30)
 	  @sub.poner_horizontal(2, 3, @tablero)
 
 	  expect(@tablero.posicion(2,3)).to eq 30
@@ -19,8 +18,7 @@ describe 'Destructor' do
 
     it 'deberia poner destructor desde pos 2,3 en vertical' do
 	  @tablero = Tablero.new(6,6)
-	  @sub = Destructor.new
-	  @sub.set_id(30)
+	  @sub = Destructor.new(30)
 	  @sub.poner_vertical(2, 3, @tablero)
 
 	  expect(@tablero.posicion(2,3)).to eq 30

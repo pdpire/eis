@@ -1,7 +1,7 @@
 class Crucero
   
-  def initialize
-    @id
+  def initialize(n)
+    @id = n
     @tamanio = 2
   end
 

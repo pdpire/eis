@@ -1,7 +1,7 @@
 class Destructor
   
-  def initialize
-    @id
+  def initialize(n)
+    @id = n
     @tamanio = 3
   end
 

@@ -8,8 +8,7 @@ describe 'Submarino' do
     
     it 'deberia poner submarino en pos 4,3' do
 	  @tablero = Tablero.new(5,5)
-	  @sub = Submarino.new
-	  @sub.set_id(10)
+	  @sub = Submarino.new(10)
 	  @sub.poner_horizontal(4, 3, @tablero)
 
 	  expect(@tablero.posicion(4,3)).to eq 10
