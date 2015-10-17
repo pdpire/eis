@@ -24,6 +24,22 @@ class Batalla_naval
   end
 
 
+  def get_crucero
+    @cru = @lista_cruceros[0]
+    @lista_cruceros.drop(1)
+    return @cru 
+  end
+
+
+  def get_destructor
+    @des = @lista_destructores[0]
+    @lista_destructores.drop(1)
+    return @des 
+  end
+
+
+
+
   def poner_en_celda(x,y,elem)
     @tablero[[x,y]] = elem
   end

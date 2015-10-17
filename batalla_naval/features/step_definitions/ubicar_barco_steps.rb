@@ -17,21 +17,40 @@ Then(/^se ubica exitosamente$/) do
 end
 
 Given(/^la posicion (\d+),(\d+) esta ocupada$/) do |arg1, arg2|
-  pending # Write code here that turns the phrase above into concrete actions
+  @batalla2 = Batalla_naval.new
+  @batalla2.crear_tablero(6,6)
+  @sub = @batalla2.get_submarino
+  @batalla2.poner_barco(4, 3, @sub, "horizontal")
 end
 
 When(/^ubico mi barco destructor$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  @des = @batalla2.get_destructor
+  begin
+    @batalla2.poner_barco(4, 3, @des, "horizontal")
+  rescue Exception => e
+    @excepcion = e
+  end
 end
 
 Then(/^no se puede ubicar$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@excepcion.message).to eq 'fuera de rango'
 end
 
 Given(/^la posicion (\d+),(\d+) esta fuera del tablero$/) do |arg1, arg2|
-  pending # Write code here that turns the phrase above into concrete actions
+  @batalla3 = Batalla_naval.new
+  @batalla3.crear_tablero(5,5)
 end
 
 When(/^ubico mi barco crucero$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  @cru = @batalla3.get_crucero
+  begin
+    @batalla3.poner_barco(6, 6, @cru, "horizontal")
+  rescue Exception => e
+    @excepcion = e
+  end
 end
+
+Then(/^no se puede ubicar en esa pos$/) do
+  expect(@excepcion.message).to eq 'fuera de rango'
+end
+

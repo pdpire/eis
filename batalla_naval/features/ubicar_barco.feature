@@ -6,14 +6,14 @@ Feature: como usuario quiero ubicar mis barcos
     When ubico mi barco submarino
     Then se ubica exitosamente
   
-  @wip
+  
   Scenario: no se puede ubicar un barco en una posicion ya ocupada
-    Given la posicion 3,3 esta ocupada
+    Given la posicion 6,6 esta ocupada
     When ubico mi barco destructor
     Then no se puede ubicar
 
-  @wip
+
   Scenario: no puedo ubicar mi barco en una posicion fuera del tablero
     Given la posicion 6,6 esta fuera del tablero
     When ubico mi barco crucero
-    Then no se puede ubicar
+    Then no se puede ubicar en esa pos
