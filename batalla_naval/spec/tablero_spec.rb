@@ -10,4 +10,5 @@ describe 'Tablero' do
 	  @tablero.poner_en_celda(2,1,"ocupado")
 	  expect(@tablero.posicion(2,1)).to eq "ocupado"
     end
+
 end

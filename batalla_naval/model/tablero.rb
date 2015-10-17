@@ -33,4 +33,20 @@ class Tablero
     @tablero[[x,y]] = elem
   end
 
+  def golpea_o_hunde(id)
+    @res = true
+    for x in 0..get_ancho
+      for y in 0..get_alto
+        if posicion(x,y) == id
+          @res = false
+        end
+      end
+    end
+    if @res
+      return "se hundio"
+    else
+      return "golpea"
+    end
+  end
+
 end

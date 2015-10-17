@@ -69,4 +69,16 @@ describe 'Batalla_naval' do
 
 	  expect(@excepcion.message).to eq 'fuera de rango'
     end
+
+
+
+    it 'dispara al agua' do
+	  @batalla = Batalla_naval.new
+	  @batalla.crear_tablero(5,5)
+	  @sub = Submarino.new(15)
+	  @batalla.poner_barco(2, 5, @sub, "vertical")
+
+	  expect(@batalla.disparar_a_celda(4,4)).to eq "agua"
+
+    end
 end
