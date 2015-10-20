@@ -11,4 +11,12 @@ describe 'Calculadora' do
 	  expect(@calc.get_cant_op).to eq 0
     end
 
+
+    it 'agrego una op, cant de op debe dar 1' do
+	  @calc = Calculadora.new
+	  @calc.agregar_op
+
+	  expect(@calc.get_cant_op).to eq 1
+    end
+
 end

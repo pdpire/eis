@@ -10,4 +10,8 @@ class Calculadora
     return @cant_op
   end
 
+  def agregar_op
+  	@cant_op = @cant_op + 1
+  end
+
 end 
