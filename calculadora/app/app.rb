@@ -44,15 +44,14 @@ module Ejemplo
       if(params[:promediar])
         ret = @calc.promediar(@num1.to_i, @num2.to_i)
       end
+      if(params[:reseteo])
+        ret = @calc.resetear
+      end
       @resultado = ret
       @operaciones = @calc.get_cant_op
       session[:operaciones] = @operaciones
       render 'calculadora'
     end
-
-
-
-
 
   end
 end
