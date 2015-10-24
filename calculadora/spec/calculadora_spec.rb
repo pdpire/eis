@@ -30,6 +30,12 @@ describe 'Calculadora' do
 	  expect(@calc.restar(3, 2)).to eq 1
     end
 
+    it 'promedio 6 con 4 y debe dar 5' do
+	  @calc = Calculadora.new
+	  expect(@calc.promediar(6, 4)).to eq 5
+    end
+
+
 
 
 end

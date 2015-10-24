@@ -24,4 +24,9 @@ class Calculadora
     return num1 - num2
   end
 
+  def promediar(num1, num2)
+    agregar_op
+    return (num1 + num2) / 2
+  end
+
 end 
