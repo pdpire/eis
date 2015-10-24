@@ -19,4 +19,9 @@ class Calculadora
     return num1 + num2
   end
 
+  def restar(num1, num2)
+    agregar_op
+    return num1 - num2
+  end
+
 end 

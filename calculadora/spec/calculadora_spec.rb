@@ -22,9 +22,14 @@ describe 'Calculadora' do
 
     it 'sumo 2 + 2 y debe dar 4' do
 	  @calc = Calculadora.new
-	  @calc.sumar(2, 2)
 	  expect(@calc.sumar(2, 2)).to eq 4
     end
+
+    it 'resto 3 - 2 y debe dar 1' do
+	  @calc = Calculadora.new
+	  expect(@calc.restar(3, 2)).to eq 1
+    end
+
 
 
 end
