@@ -6,3 +6,9 @@ Feature: Operaciones basicas
     When los sumo
     Then el resultado es 3
 
+  Scenario: resta
+    Given el operando es 5
+    And el otro operando es 3
+    When los resto
+    Then el resultado de restar es 2
+

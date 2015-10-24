@@ -35,6 +35,9 @@ module Ejemplo
       if(params[:sumar])
         ret = @calc.sumar(@num1.to_i, @num2.to_i)
       end
+      if(params[:restar])
+        ret = @calc.restar(@num1.to_i, @num2.to_i)
+      end
       @resultado = ret
       render 'calculadora'
     end
