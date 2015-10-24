@@ -19,4 +19,12 @@ describe 'Calculadora' do
 	  expect(@calc.get_cant_op).to eq 1
     end
 
+
+    it 'sumo 2 + 2 y debe dar 4' do
+	  @calc = Calculadora.new
+	  @calc.sumar(2, 2)
+	  expect(@calc.sumar(2, 2)).to eq 4
+    end
+
+
 end

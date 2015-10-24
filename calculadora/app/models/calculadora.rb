@@ -14,4 +14,9 @@ class Calculadora
   	@cant_op = @cant_op + 1
   end
 
+  def sumar(num1, num2)
+    agregar_op
+    return num1 + num2
+  end
+
 end 
