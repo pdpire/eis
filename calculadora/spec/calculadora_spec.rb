@@ -35,7 +35,10 @@ describe 'Calculadora' do
 	  expect(@calc.promediar(6, 4)).to eq 5
     end
 
-
-
+    it 'reseteo y cantidad deberia quedar en 0' do
+	  @calc = Calculadora.new
+	  @calc.resetear
+	  expect(@calc.get_cant_op).to eq 0
+    end
 
 end

@@ -33,4 +33,8 @@ class Calculadora
     return (num1 + num2) / 2
   end
 
+  def resetear
+    @cant_op = 0
+  end
+
 end 
