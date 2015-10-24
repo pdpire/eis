@@ -1,6 +1,5 @@
 Feature: Operaciones basicas
 
-  @wip
   Scenario: suma
     Given un operando es 1
     And otro operando es 2
