@@ -1,19 +1,8 @@
 Given(/^no hice operaciones$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit 'calculadora'
 end
 
-Then(/^la cantidad de operaiones es (\d+)$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^la cantidad de operaciones es (\d+)$/) do |arg1|	
+  expect(page).to have_content(0)
 end
 
-Given(/^hago una suma$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Given(/^hago una resta$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Given(/^reseteo la memoria$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
