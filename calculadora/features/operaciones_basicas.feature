@@ -12,3 +12,9 @@ Feature: Operaciones basicas
     When los resto
     Then el resultado de restar es 2
 
+  Scenario: promedio
+    Given nuevo operando es 10
+    And otro nuevo operando es 4
+    When los promedio
+    Then el resultado de promediar es 7
+

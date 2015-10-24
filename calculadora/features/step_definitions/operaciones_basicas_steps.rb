@@ -34,3 +34,21 @@ Then(/^el resultado de restar es (\d+)$/) do |arg1|
 end
 
 
+
+Given(/^nuevo operando es (\d+)$/) do |arg1|
+  visit 'calculadora'
+  fill_in 'num1', with: 10
+end
+
+Given(/^otro nuevo operando es (\d+)$/) do |arg1|
+  fill_in 'num2', with: 4
+end
+
+When(/^los promedio$/) do
+  click_button('Promedio')
+end
+
+Then(/^el resultado de promediar es (\d+)$/) do |arg1|
+  expect(page).to have_content(7)
+end
+

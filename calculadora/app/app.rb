@@ -38,6 +38,9 @@ module Ejemplo
       if(params[:restar])
         ret = @calc.restar(@num1.to_i, @num2.to_i)
       end
+      if(params[:promediar])
+        ret = @calc.promediar(@num1.to_i, @num2.to_i)
+      end
       @resultado = ret
       render 'calculadora'
     end
