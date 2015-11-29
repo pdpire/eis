@@ -1,0 +1,12 @@
+Titulo: Agile software development: principles, patterns, and practices
+
+Autor: Robert C. Martin
+
+Año de publicación: 2011
+
+Resumen:
+
+El libro trata sobre los últimos métodos de desarrollo de software. El autor incluye OOD, UML, patrones de diseño, Ágil, etc. con descripción de diseño de software para programas reutilizables en C++ y Java. 
+Muestra como realizar una aplicación orientada a objetos con un enfoque práctico. Explica los principios del diseño orientado a objetos y los muestra con numerosos ejemplos en diversos casos. Cubre soluciones en la aplicacion de los métodos y luego muestra como los métodos ágiles se pueden utilizar. Discute los métodos para el diseño y desarrollo de software en gran detalle. 
+Está orientado a ingenieros de software, programadores y analistas que quieren entender como diseñar software orientado a objetos entendiendo el estado de la técnica. 
+
